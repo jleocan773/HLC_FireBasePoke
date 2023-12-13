@@ -1,5 +1,5 @@
 {
-  "name": "Agenda",
+  "name": "ejemplo-tareas",
   "integrations": {
     "capacitor": {}
   },
