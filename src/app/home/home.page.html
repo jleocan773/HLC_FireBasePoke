@@ -1,0 +1,69 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Lista de Pokemon de Primera Generación</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="contenido__fondo">
+  <!-- Barra de búsqueda -->
+  <br>
+  <ion-label class="campoFiltrado">Filtrado por Nombre</ion-label>
+  <ion-input class="ion-element-padding" [(ngModel)]="filtro" (ionChange)="filtrarPorNombre()" placeholder="Introduce un filtro"></ion-input>
+  <br>
+  
+  <!-- Búsqueda por Tipos -->
+  <ion-label class="campoFiltrado">Filtrado por Tipos</ion-label>
+  <!-- Primer campo select para el primer tipo -->
+  <ion-select class="ion-element-padding"[(ngModel)]="tipoSeleccionado1" (ionChange)="filtrarPorTipo()">
+    <ion-select-option value="">Cualquiera</ion-select-option>
+    <ion-select-option *ngFor="let tipo of tiposDisponibles" [value]="tipo">
+      {{ tipo }}
+    </ion-select-option>
+  </ion-select>
+
+  <!-- Segundo campo select para el segundo tipo -->
+  <ion-select class="ion-element-padding" [(ngModel)]="tipoSeleccionado2" (ionChange)="filtrarPorTipo()">
+    <ion-select-option value="">Cualquiera</ion-select-option>
+    <ion-select-option *ngFor="let tipo of tiposDisponibles" [value]="tipo">
+      {{ tipo }}
+    </ion-select-option>
+  </ion-select>
+
+  <!-- Grid para mostrar las tarjetas de Pokémon -->
+  <ion-grid>
+    <ion-row>
+      <ng-container *ngFor="let pokemon of pokemons">
+        <ion-col size-xl="4" size-l="4" size-md="6" size-sm="12" size-xs="12">
+          <ion-card [ngClass]="getDualTypeClass(pokemon.type)">            
+            <ion-card-content class="contenido__flex">
+              <!-- Imagen del Pokémon (más grande) -->
+              <img class="imagen__grande" [src]="pokemon.picture" />
+
+              <!-- Información del Pokémon a la derecha de la imagen -->
+              <div class="info__derecha">
+                <!-- Nombre del Pokémon -->
+                <p class="nombrePokemon">{{ pokemon.name.english }}</p>
+
+                <br>
+
+                <!-- Tipos del Pokémon -->
+                <p>Tipos:</p>
+                <p>{{ pokemon.type.join(', ') }}</p>
+
+                <br>
+
+                <!-- Otra información del Pokémon (HP, Ataque, Defensa, etc.) -->
+                <p>HP: {{ pokemon.base.HP }}</p>
+                <p>Ataque: {{ pokemon.base.Attack }}</p>
+                <p>Defensa: {{ pokemon.base.Defense }}</p>
+                <p>Ataque SP: {{ pokemon.base['Sp. Attack'] }}</p>
+                <p>Defensa SP: {{ pokemon.base['Sp. Defense'] }}</p>
+                <p>Velocidad: {{ pokemon.base.Speed }}</p>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ng-container>
+    </ion-row>
+  </ion-grid>
+</ion-content>

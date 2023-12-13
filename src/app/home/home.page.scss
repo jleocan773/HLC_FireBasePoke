@@ -1,0 +1,246 @@
+.contenido__flex {
+  color: white; /* Color de la letra blanco */
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; /* Contorno azul oscuro */
+}
+
+.imagen__grande {
+  max-width: 450px; /* Tamaño máximo para la imagen */
+  height: auto; /* Altura automática para mantener la proporción */
+}
+
+.campoFiltrado {
+  padding-left: 10px;
+  color: white; /* Color de la letra blanco */
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; /* Contorno azul oscuro */
+}
+
+.ion-element-padding {
+  --padding-start: 20px; /* Establece el espacio a la izquierda del ion-input */
+}
+
+.imagen__grande {
+  height: 300px;
+  object-fit: cover; /* Para mantener la relación de aspecto */
+}
+
+.contenido__flex {
+  display: flex;
+  align-items: center;
+}
+
+.info__derecha {
+  margin-left: 20px;
+}
+
+// Estilos para pantallas grandes
+@media (min-width: 992px) {
+  ion-card {
+    color: #f0f0f0;
+  }
+
+  ion-content {
+    --ion-background-color: #db3c36;
+  }
+}
+
+// Estilos para pantallas medianas
+@media (min-width: 768px) and (max-width: 991px) {
+  ion-card {
+    color: #f0f0f0;
+  }
+
+  ion-content {
+    --ion-background-color: #C9215A;
+  }
+}
+
+// Estilos para pantallas pequeñas
+@media (max-width: 767px) {
+  ion-card {
+    color: #f0f0f0;
+  }
+  
+  ion-content {
+    --ion-background-color: #FA8E55;
+  }
+}
+
+.tipo-acero {
+  background-color: #60a1b8; /* Color para el tipo Acero */
+}
+
+.tipo-agua {
+  background-color: #2980ef; /* Color para el tipo Agua */
+}
+
+.tipo-bicho {
+  background-color: #91a119; /* Color para el tipo Bicho */
+}
+
+.tipo-dragón {
+  background-color: #5364e3; /* Color para el tipo Dragón */
+}
+
+.tipo-eléctrico {
+  background-color: #fbc202; /* Color para el tipo Eléctrico */
+}
+
+.tipo-fantasma {
+  background-color: #704170; /* Color para el tipo Fantasma */
+}
+
+.tipo-fuego {
+  background-color: #e62829; /* Color para el tipo Fuego */
+}
+
+.tipo-hada {
+  background-color: #ef71ef; /* Color para el tipo Hada */
+}
+
+.tipo-hielo {
+  background-color: #3dd9ff; /* Color para el tipo Hielo */
+}
+
+.tipo-lucha {
+  background-color: #ff8100; /* Color para el tipo Lucha */
+}
+
+.tipo-normal {
+  background-color: #9fa19f; /* Color para el tipo Normal */
+}
+
+.tipo-planta {
+  background-color: #4ba736; /* Color para el tipo Planta */
+}
+
+.tipo-psíquico {
+  background-color: #ef4179; /* Color para el tipo Psíquico */
+}
+
+.tipo-roca {
+  background-color: #afa981; /* Color para el tipo Roca */
+}
+
+.tipo-siniestro {
+  background-color: #50413f; /* Color para el tipo Siniestro */
+}
+
+.tipo-tierra {
+  background-color: #915121; /* Color para el tipo Tierra */
+}
+
+.tipo-veneno {
+  background-color: #8f41cb; /* Color para el tipo Veneno */
+}
+
+.tipo-volador {
+  background-color: #81b9ef; /* Color para el tipo Volador */
+}
+
+.tipo-planta-veneno {
+  background: linear-gradient(to bottom, #4ba736, #8f41cb); /* Planta - Veneno */
+}
+
+.tipo-fuego-volador {
+  background: linear-gradient(to bottom, #e62829, #81b9ef); /* Fuego - Volador */
+}
+
+.tipo-bicho-volador {
+  background: linear-gradient(to bottom, #91a119, #81b9ef); /* Bicho - Volador */
+}
+
+.tipo-bicho-veneno {
+  background: linear-gradient(to bottom, #91a119, #8f41cb); /* Bicho - Veneno */
+}
+
+.tipo-normal-volador {
+  background: linear-gradient(to bottom, #9fa19f, #81b9ef); /* Normal - Volador */
+}
+
+.tipo-veneno-tierra {
+  background: linear-gradient(to bottom, #8f41cb, #915121); /* Veneno - Tierra */
+}
+
+.tipo-normal-hada {
+  background: linear-gradient(to bottom, #9fa19f, #ef71ef); /* Normal - Hada */
+}
+
+.tipo-veneno-volador {
+  background: linear-gradient(to bottom, #8f41cb, #81b9ef); /* Veneno - Volador */
+}
+
+.tipo-bicho-planta {
+  background: linear-gradient(to bottom, #91a119, #4ba736); /* Bicho - Planta */
+}
+
+.tipo-agua-lucha {
+  background: linear-gradient(to bottom, #2980ef, #ff8100); /* Agua - Lucha */
+}
+
+.tipo-agua-veneno {
+  background: linear-gradient(to bottom, #2980ef, #8f41cb); /* Agua - Veneno */
+}
+
+.tipo-roca-tierra {
+  background: linear-gradient(to bottom, #afa981, #915121); /* Roca - Tierra */
+}
+
+.tipo-agua-psíquico {
+  background: linear-gradient(to bottom, #2980ef, #ef4179); /* Agua - Psíquico */
+}
+
+.tipo-eléctrico-acero {
+  background: linear-gradient(to bottom, #fbc202, #60a1b8); /* Eléctrico - Acero */
+}
+
+.tipo-agua-hielo {
+  background: linear-gradient(to bottom, #2980ef, #3dd9ff); /* Agua - Hielo */
+}
+
+.tipo-fantasma-veneno {
+  background: linear-gradient(to bottom, #704170, #8f41cb); /* Fantasma - Veneno */
+}
+
+.tipo-planta-psíquico {
+  background: linear-gradient(to bottom, #4ba736, #ef4179); /* Planta - Psíquico */
+}
+
+.tipo-psíquico-hada {
+  background: linear-gradient(to bottom, #ef4179, #ef71ef); /* Psíquico - Hada */
+}
+
+.tipo-hielo-psíquico {
+  background: linear-gradient(to bottom, #3dd9ff, #ef4179); /* Hielo - Psíquico */
+}
+
+.tipo-agua-volador {
+  background: linear-gradient(to bottom, #2980ef, #81b9ef); /* Agua - Volador */
+}
+
+.tipo-roca-agua {
+  background: linear-gradient(to bottom, #afa981, #2980ef); /* Roca - Agua */
+}
+
+.tipo-roca-volador {
+  background: linear-gradient(to bottom, #afa981, #81b9ef); /* Roca - Volador */
+}
+
+.tipo-hielo-volador {
+  background: linear-gradient(to bottom, #3dd9ff, #81b9ef); /* Hielo - Volador */
+}
+
+.tipo-eléctrico-volador {
+  background: linear-gradient(to bottom, #fbc202, #81b9ef); /* Eléctrico - Volador */
+}
+
+.tipo-dragón-volador {
+  background: linear-gradient(to bottom, #5364e3, #81b9ef); /* Dragón - Volador */
+}
